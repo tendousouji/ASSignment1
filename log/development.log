@@ -17916,3 +17916,256 @@ Processing by BooksController#new as HTML
   Rendered books/_form.html.erb (2.6ms)
   Rendered books/new.html.erb within layouts/application (3.6ms)
 Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-10 14:14:50 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 95ms (Views: 71.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-04-10 14:14:50 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-10 14:14:50 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-10 14:14:50 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-10 14:14:50 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-10 14:14:50 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-10 14:14:50 +0700
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-04-10 14:14:50 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-10 14:14:50 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_categories_on_book_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_categories_on_book_id' AND type='index'
+[0m
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-10 14:23:45 +0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 89ms (Views: 67.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-04-10 14:23:45 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-10 14:23:45 +0700
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-04-10 14:23:45 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-10 14:23:45 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-10 14:23:45 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-10 14:23:45 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-10 14:23:45 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-10 14:23:45 +0700
+
+
+Started GET "/books/8" for 127.0.0.1 at 2014-04-10 14:23:46 +0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered books/show.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-10 14:23:48 +0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/books/new" for 127.0.0.1 at 2014-04-10 14:23:49 +0700
+Processing by BooksController#new as HTML
+  Rendered books/_form.html.erb (15.7ms)
+  Rendered books/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/books" for 127.0.0.1 at 2014-04-10 14:24:00 +0700
+Processing by BooksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"84JPhuHhcqh8Fo22RMZi9k6vZz/4P+UC476NN66GAyU=", "book"=>{"Title"=>"Ruby on Rails", "Author"=>"Ruby", "Description"=>"asdfadsfsadfsad", "image"=>#<ActionDispatch::Http::UploadedFile:0x007faf9950fe60 @tempfile=#<Tempfile:/tmp/RackMultipart20140410-5932-17r7osl>, @original_filename="Screenshot from 2014-03-23 21:45:43.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"book[image]\"; filename=\"Screenshot from 2014-03-23 21:45:43.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Create Book"}
+Command :: file -b --mime-type '/tmp/62e2f1b494285feb1a72b6c4f58f3b9220140410-5932-ikg1zu'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/59c2fbc6a253be7b6464bd19de7d1d2220140410-5932-1kv40g9[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/59c2fbc6a253be7b6464bd19de7d1d2220140410-5932-1kv40g9[0]'
+Command :: convert '/tmp/59c2fbc6a253be7b6464bd19de7d1d2220140410-5932-1kv40g9[0]' -auto-orient -resize "500x300>" '/tmp/59c2fbc6a253be7b6464bd19de7d1d2220140410-5932-1kv40g920140410-5932-vcmsxt'
+Command :: file -b --mime '/tmp/59c2fbc6a253be7b6464bd19de7d1d2220140410-5932-1kv40g920140410-5932-vcmsxt'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/tmp/59c2fbc6a253be7b6464bd19de7d1d2220140410-5932-1kv40g9[0]' 2>/dev/null
+Command :: identify -format %m '/tmp/59c2fbc6a253be7b6464bd19de7d1d2220140410-5932-1kv40g9[0]'
+Command :: convert '/tmp/59c2fbc6a253be7b6464bd19de7d1d2220140410-5932-1kv40g9[0]' -auto-orient -resize "100x100>" '/tmp/59c2fbc6a253be7b6464bd19de7d1d2220140410-5932-1kv40g920140410-5932-7z88qm'
+Command :: file -b --mime '/tmp/59c2fbc6a253be7b6464bd19de7d1d2220140410-5932-1kv40g920140410-5932-7z88qm'
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Command :: file -b --mime-type '/tmp/910ead694fd449c5b283134f0401be5120140410-5932-1nbz7fr'
+Binary data inserted for `string` type on column `image_content_type`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "books" ("Author", "Description", "Title", "created_at", "image_content_type", "image_file_name", "image_file_size", "image_updated_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["Author", "Ruby"], ["Description", "asdfadsfsadfsad"], ["Title", "Ruby on Rails"], ["created_at", "2014-04-10 07:24:00.844147"], ["image_content_type", "image/png"], ["image_file_name", "Screenshot_from_2014-03-23_21_45_43.png"], ["image_file_size", 246783], ["image_updated_at", "2014-04-10 07:24:00.441481"], ["updated_at", "2014-04-10 07:24:00.844147"]]
+  [1m[36m (252.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://0.0.0.0:3000/books
+Completed 302 Found in 676ms (ActiveRecord: 253.0ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-10 14:24:01 +0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-10 14:24:01 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:01 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:01 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-10 14:24:01 +0700
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-04-10 14:24:01 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:01 +0700
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:01 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:01 +0700
+
+
+Started GET "/books/9" for 127.0.0.1 at 2014-04-10 14:24:02 +0700
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mBook Load (0.3ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered books/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-10 14:24:08 +0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.5ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/books/8" for 127.0.0.1 at 2014-04-10 14:24:10 +0700
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"84JPhuHhcqh8Fo22RMZi9k6vZz/4P+UC476NN66GAyU=", "id"=>"8"}
+  [1m[36mBook Load (0.1ms)[0m  [1mSELECT  "books".* FROM "books"  WHERE "books"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "books" WHERE "books"."id" = ?[0m  [["id", 8]]
+  [1m[35m (180.1ms)[0m  commit transaction
+[paperclip] deleting /home/xuanvu/Assignment/Assignment1/public/system/books/images/000/000/008/original/1926918_590243327722341_72507570_n.jpg
+[paperclip] deleting /home/xuanvu/Assignment/Assignment1/public/system/books/images/000/000/008/medium/1926918_590243327722341_72507570_n.jpg
+[paperclip] deleting /home/xuanvu/Assignment/Assignment1/public/system/books/images/000/000/008/thumb/1926918_590243327722341_72507570_n.jpg
+Redirected to http://0.0.0.0:3000/books
+Completed 302 Found in 191ms (ActiveRecord: 180.5ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-10 14:24:11 +0700
+Processing by BooksController#index as HTML
+  [1m[36mBook Load (0.2ms)[0m  [1mSELECT "books".* FROM "books"[0m
+  Rendered books/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-04-10 14:24:11 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:11 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:11 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-10 14:24:11 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-10 14:24:11 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:11 +0700
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:11 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:11 +0700
+
+
+Started DELETE "/books/9" for 127.0.0.1 at 2014-04-10 14:24:14 +0700
+Processing by BooksController#destroy as HTML
+  Parameters: {"authenticity_token"=>"84JPhuHhcqh8Fo22RMZi9k6vZz/4P+UC476NN66GAyU=", "id"=>"9"}
+  [1m[35mBook Load (0.1ms)[0m  SELECT  "books".* FROM "books"  WHERE "books"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "books" WHERE "books"."id" = ?  [["id", 9]]
+  [1m[36m (144.0ms)[0m  [1mcommit transaction[0m
+[paperclip] deleting /home/xuanvu/Assignment/Assignment1/public/system/books/images/000/000/009/original/Screenshot_from_2014-03-23_21_45_43.png
+[paperclip] deleting /home/xuanvu/Assignment/Assignment1/public/system/books/images/000/000/009/medium/Screenshot_from_2014-03-23_21_45_43.png
+[paperclip] deleting /home/xuanvu/Assignment/Assignment1/public/system/books/images/000/000/009/thumb/Screenshot_from_2014-03-23_21_45_43.png
+Redirected to http://0.0.0.0:3000/books
+Completed 302 Found in 162ms (ActiveRecord: 144.6ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2014-04-10 14:24:14 +0700
+Processing by BooksController#index as HTML
+  [1m[35mBook Load (0.2ms)[0m  SELECT "books".* FROM "books"
+  Rendered books/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/books.css?body=1" for 127.0.0.1 at 2014-04-10 14:24:14 +0700
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-04-10 14:24:14 +0700
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:14 +0700
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-10 14:24:14 +0700
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:14 +0700
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:14 +0700
+
+
+Started GET "/assets/books.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:14 +0700
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-10 14:24:14 +0700

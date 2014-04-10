@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<h2><%= @book.Title %></h2>
+
+<%= image_tag @book.image.url ( :medium) %> <br>
+
+<%= simple_format (@book.Description) %>
+
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'View all', books_path %>

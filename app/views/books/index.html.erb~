@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Cover</th>
       <th>Title</th>
       <th>Author</th>
       <th>Description</th>

@@ -24,6 +24,10 @@
     <%= f.text_area :Description %>
   </div>
   <div class="field">
+    <%= f.label :Category %><br>
+    <%= f.select(:Author, options_for_select(['romantic'])) %>
+  </div>
+  <div class="field">
     <%= f.label :Cover %><br>
     <%= f.file_field :image %>
   </div>

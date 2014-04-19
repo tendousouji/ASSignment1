@@ -1,15 +1,35 @@
-<p id="notice"><%= notice %></p>
+<div class="container" style="padding-top:90px; padding-bottom: 10%;">
+	<p id="notice"><%= notice %></p>
+	 <div class="row featurette" style="height: 230px;">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><%= @book.title %><span class="text-muted small">  <%= @book.author %></span></h2>
+              <p class="lead">Description: <%= @book.description %></p>
+            </div>
+            <div class="col-md-5">
+             <%= image_tag @book.image.url, size: "450x300", alt: "image" %>
+            </div>
+    </div>
 
-<h2><%= @book.Title %></h2>
+    <div  style="margin-left: 50px;">
+            <h2 class="page-header">Categories of this book</h2>
+            <% @book.categories.each do |category| %>
+                <p class="lead" style="margin-left:40px; padding-right: 40px; float: left; "> <img src="/assets/4.png">  <%= category.name %> </p>
+                <%= link_to 'Delete',  [category.book, category], method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+            <% end %>
+    </div>
 
-<%= image_tag @book.image.url ( :medium) %> <br>
-
-<%= simple_format (@book.Description) %>
-
-<p><b>Author:</b> <%= @book.Author %></p>
-<p><b>Category:</b></p>
-
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Delete', book_path(@book), method: :delete, data: { confirm: 'Are you sure?' } %> |
-<%= link_to 'View all', books_path %>
-
+    <div class="container" style="margin-left:100px; max-width: 500px;">
+        <h2 class="page-header">Add a category</h2>
+        <%= form_for([@book, @book.categories.build]) do |f| %> 
+          <div class="form-signin" role="form">
+            <h4 class="form-signin-heading"><%= f.label :name %></h4>
+            <%= f.text_field :name, :class => "form-control"%> <br>
+            <p>
+              <%= f.submit :class=> "btn btn-primary" %>
+            </p>
+          </div>
+        <% end %>
+    </div>
+	<%= link_to 'Edit', edit_book_path(@book), :class => "btn btn-default" %> |
+	<%= link_to 'Back', books_path, :class => "btn btn-default" %>
+</div>

@@ -1,17 +1,21 @@
-<h1>Listing Books</h1>
-
-<%= form_tag(books_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Enter Books" %>
-  <%= submit_tag "GO", :name => nil %>
-<% end %>
-<br>
-<table>
-  <tbody>
-    <% @books.each do |book| %>
-      <td><%= link_to image_tag( book.image.url ( :thumb)), book %></td>
-    <% end %>
-  </tbody>
-</table>
-<br>
-
-<%= link_to 'New Book', new_book_path %>
+<div class="container" style="padding-top:90px;">
+        <div class="container">
+          <h1 style="color:#990000;">Book list</h1>
+          <%= link_to "Creat book", new_book_path, :class=>"btn btn-default"%>
+      </div>
+   <% @books.each do |book| %>
+         <div class="row featurette" style="height: 230px">
+            <div class="col-md-7">
+              <h2 class="featurette-heading"><%= book.title %><span class="text-muted small">  <%= book.author %></span></h2>
+              <p class="lead">Description: <%= book.description %></p>
+              <%= link_to 'Show', book, :class=> "btn btn-default"%>
+              <%= link_to 'Edit', edit_book_path(book), :class=> "btn btn-default" %>
+              <%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "btn btn-default" %>
+            </div>
+            <div class="col-md-5">
+              <%= image_tag book.image.url, size: "450x300", alt: "image"%>
+            </div>
+          </div>
+  <hr class="featurette-divider">
+  <% end %>
+</div>

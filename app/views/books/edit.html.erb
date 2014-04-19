@@ -1,6 +1,43 @@
-<h1>Editing book</h1>
+<div class="container" style="padding-top:90px; padding-bottom:10%;">
+    <h1 style="color:#990000">Editing book</h1>
+	<%= form_for(@book, :html => { :multipart => true }) do |f| %>
+		  <% if @book.errors.any? %>
+		    <div id="error_explanation">
+		      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
 
-<%= render 'form' %>
+		      <ul>
+		      <% @book.errors.full_messages.each do |msg| %>
+		        <li><%= msg %></li>
+		      <% end %>
+		      </ul>
+		    </div>
+		  <% end %>
+		 <div class="row featurette">
+		     <div class="col-md-7">
+				  <div class="form-signin" role="form">
+					    <h4 class="form-signin-heading"><%= f.label :title %></h4>
+					    <%= f.text_field :title, :class => "form-control" %>
 
-<%= link_to 'Show', @book %> |
-<%= link_to 'Back', books_path %>
+					    <h4 class="form-signin-heading"><%= f.label :author %></h4>
+					    <%= f.text_field :author, :class => "form-control" %>
+
+					    <h4 class="form-signin-heading"><%= f.label :description %></h4>
+					    <%= f.text_field :description, :class => "form-control" %><br>
+
+					    <h4 class="form-signin-heading"><%= f.label :image %></h4>
+					    <%= f.file_field :image %><br>
+
+						 <div class="actions">
+						    <%= f.submit :class=> "btn btn-primary" %>
+						 </div>
+				  </div>
+			</div>
+			<div class="col-md-5">
+              <%= image_tag @book.image.url, size: "450x300", alt: "image"%>
+            </div>
+		</div>
+	<% end %>
+
+	<%= link_to 'Show', @book, :class => "btn btn-default" %> |
+	<%= link_to 'Back', books_path, :class => "btn btn-default" %>
+</div>
